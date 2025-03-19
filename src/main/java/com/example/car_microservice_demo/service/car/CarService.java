@@ -1,4 +1,4 @@
-package com.example.car_microservice_demo.service;
+package com.example.car_microservice_demo.service.car;
 
 import com.example.car_microservice_demo.data.entity.Car;
 import com.example.car_microservice_demo.web.model.CarRespModel;
@@ -18,4 +18,6 @@ public interface CarService {
     CarRespModel update(Car car);
 
     List<CarRespModel> findAllByOwnerId(Long userId);
+
+    void deleteCarsByOwnerId(Long userId);
 }

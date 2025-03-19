@@ -35,14 +35,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2024.0.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.30</version> <!-- Enforcing Lombok version -->
@@ -58,11 +50,6 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
@@ -70,7 +57,13 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
             <version>1.6.3</version>
-            <scope>provided</scope> <!-- Annotation processor is provided at compile-time -->
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>3.3.1</version>
         </dependency>
 
         <!--        <dependency>-->
@@ -109,12 +102,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.fasterxml</groupId>
-            <artifactId>classmate</artifactId>
-            <version>1.3.4</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -125,12 +112,6 @@
             <artifactId>h2</artifactId>
             <version>1.4.200</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.3.0</version>
         </dependency>
     </dependencies>
 
